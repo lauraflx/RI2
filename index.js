@@ -24,10 +24,17 @@ function Cliente(nome, telefone, email, endereco) {
     this.endereco = endereco
 
     this.getDescricao = function() {
-        return "Cliente: " + this.nome + 
+        return "-----------------------" +
+               "\nInformações do Cliente:" +
+               "\n" + this.nome +
                "\nEmail: " + this.email.toLowerCase() +
-               "\n" + this.telefone.getDescricao() + 
-               "\n" + this.endereco.getDescricao()
+               "\n-----------------------" +
+               "\nTelefone:" +
+               "\n" + this.telefone.getDescricao() +
+               "\n-----------------------" +
+               "\nEndereço:" +
+               "\n" + this.endereco.getDescricao() +
+               "\n"
     }
 }
 
@@ -55,5 +62,4 @@ console.log("--- Informações dos Clientes: ---")
 let clientesOrdenados = ordenarClientes(clientes)
 clientesOrdenados.forEach(c => {
     console.log(c.getDescricao())
-    console.log("---------------------------------") 
 })
